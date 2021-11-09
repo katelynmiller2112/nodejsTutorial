@@ -3,7 +3,11 @@ const express = require("express")
 const app = express();
 
 app.get("/",(req, res) => {
-    console.log("First request");
+    res.send("first request");
+});
+
+app.get("/users",(req, res) => {
+    res.send("Here are your users");
 });
 
 app.listen(3000, () => {
